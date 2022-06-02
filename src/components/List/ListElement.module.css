@@ -1,0 +1,29 @@
+.ListElement {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ListElement h3 {
+    margin-bottom: 30px;
+    color: #356de3;
+}
+
+.ListElement img {
+    transition: transform .2s ease-in;
+}
+.ListElement:hover img {
+    transform: scale(1.05);
+}
+
+.ListElement p {
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(239 251 255);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #180724;
+}

@@ -1,0 +1,50 @@
+.Mode {
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.bgc-box {
+    position: relative;
+    margin-bottom: 5rem;
+    height: 200px;
+    width: 350px;
+    border-radius: 500px;
+    box-shadow: 0 6px #fdbad5;
+    background: linear-gradient(6deg, rgb(238 143 199) 0%, rgb(172 144 238) 100%);
+}
+
+.animation-wrapper {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+}
+
+.mode-box {
+    padding: 10px 20px;
+    min-width: 100px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+
+    border-radius: 20px;
+
+    background-color: var(--pink);
+    z-index: 2;
+}
+
+.span {
+    color: white;
+    text-transform: uppercase;
+}
