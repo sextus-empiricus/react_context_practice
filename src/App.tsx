@@ -33,7 +33,7 @@ const App = () => {
                     <Card>
                         <h2 style={{
                             marginBottom: '30px',
-                            color: '#f50de3'
+                            color: '#356de3'
                         }}>{darkTheme ? 'Nocturnal animals' : 'Diurnal animals'}</h2>
                         <AnimalsList/>
                     </Card>
