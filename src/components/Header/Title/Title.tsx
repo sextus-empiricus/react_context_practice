@@ -1,7 +1,8 @@
 import React, {useContext} from 'react';
 
-import classes from './Title.module.css';
 import {ThemeContext} from '../../../App';
+
+import classes from './Title.module.css';
 
 interface Props {
 }

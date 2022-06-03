@@ -4,11 +4,9 @@ import {AnimalEntity} from '../../../types/Animal';
 
 import classes from './ListElement.module.css';
 
-
 interface Props {
     animal: AnimalEntity
 }
-
 
 const ListElement = ({animal}: Props) => {
 

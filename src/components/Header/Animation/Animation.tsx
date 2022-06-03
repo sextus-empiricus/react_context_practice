@@ -4,8 +4,9 @@ import lottie from 'lottie-web';
 import sunAnimation from '../../../assets/lottie-animatios/sun.json'
 import moonAnimation from '../../../assets/lottie-animatios/moon.json'
 
-import classes from './Animation.module.css';
 import {ThemeContext} from '../../../App';
+
+import classes from './Animation.module.css';
 
 const Animation = () => {
     const darkMode = useContext(ThemeContext);

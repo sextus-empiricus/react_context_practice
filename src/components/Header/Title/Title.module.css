@@ -24,14 +24,6 @@
     color: royalblue;
 }
 
-.Title .span-2 {
-
-}
-
-.Title .span-3 {
-
-}
-
 .Title--dark::after{
     background: linear-gradient(184deg, rgb(5 7 32) 85%, rgb(20 11 84) 114%);
 }

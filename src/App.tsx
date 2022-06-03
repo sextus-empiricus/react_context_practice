@@ -1,7 +1,6 @@
 import React, {createContext, useState} from 'react';
 
 import {Footer} from './components/Footer/Footer';
-
 import {Card} from './components/Card/Card';
 import {ModeBox} from './components/Header/ModeBox/ModeBox';
 import {AnimalsList} from './components/List/AnimalsList';

@@ -2,8 +2,9 @@ import React, {useContext} from 'react';
 import {Animation} from '../Animation/Animation';
 import {Button} from '../../UI/Button/Button';
 
-import classes from './ModeBox.module.css';
 import {ThemeContext} from '../../../App';
+
+import classes from './ModeBox.module.css';
 
 interface Props {
     btnActionHandler: () => void;
@@ -28,7 +29,6 @@ const ModeBox = ({btnActionHandler}: Props) => {
 
             <Button content="Switch" actionHandler={btnActionHandler}/>
         </div>
-
     );
 }
 
