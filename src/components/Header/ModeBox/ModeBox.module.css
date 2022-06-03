@@ -14,8 +14,16 @@
     height: 200px;
     width: 350px;
     border-radius: 500px;
-    box-shadow: 0 6px #fdbad5;
-    background: linear-gradient(6deg, rgb(238 143 199) 0%, rgb(172 144 238) 100%);
+    box-shadow: 0 1px 5px #fdbad5;
+    background: linear-gradient(0deg, rgba(42, 10, 40, 1) 0%, rgba(33, 59, 135, 1) 33%, rgba(172, 144, 238, 1) 66%, rgba(238, 143, 199, 1) 100%);
+    background-size: 100vh 600px;
+    background-position-y: 0;
+    transition: background-position-y 1s;
+}
+
+.overflow-wrapper {
+    overflow-y: hidden;
+    height: 270px;
 }
 
 .animation-wrapper {
@@ -40,11 +48,22 @@
 
     border-radius: 20px;
 
-    background-color: var(--pink);
+    background-color: rgb(251 158 196);
     z-index: 2;
+
+    transition: background-color 1s;
 }
 
 .span {
     color: white;
     text-transform: uppercase;
+}
+
+.bgc-box--dark {
+    box-shadow: 0 1px 5px #1f56cb;
+    background-position-y: -350px;
+}
+
+.mode-box--dark {
+    background-color: #616e9f;
 }

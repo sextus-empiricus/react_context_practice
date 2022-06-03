@@ -1,43 +1,53 @@
-import React from 'react';
+import React, {createContext, useState} from 'react';
 
 import {Footer} from './components/Footer/Footer';
 
-import classes from './App.module.css';
 import {Card} from './components/Card/Card';
 import {ModeBox} from './components/Header/ModeBox/ModeBox';
 import {AnimalsList} from './components/List/AnimalsList';
 import {Title} from './components/Header/Title/Title';
 
+import classes from './App.module.css';
+
+const ThemeContext = createContext<boolean>(true);
+
 const App = () => {
+    const [darkTheme, setDarkTheme] = useState<boolean>(false);
 
+    const toggleTheme = () => {
+        setDarkTheme(prev => !prev);
+    }
 
+    return <>
+        <ThemeContext.Provider value={darkTheme}>
+            <div className={classes.App}>
 
-  return <>
-    <div className={classes.App}>
-      <header>
-        <Title/>
-        <ModeBox/>
-      </header>
+                <div className={`${classes.background} ${darkTheme && classes['background--dark']}`}/>
 
-      <main>
-        <Card>
-          <h2 style={{marginBottom: '30px', color: '#f50de3'}}>Diurnal animals</h2>
-          <AnimalsList/>
-        </Card>
-      </main>
+                <header>
+                    <Title/>
+                    <ModeBox btnActionHandler={toggleTheme}/>
+                </header>
 
-      <footer>
-        <Footer/>
-      </footer>
+                <main>
+                    <Card>
+                        <h2 style={{
+                            marginBottom: '30px',
+                            color: '#f50de3'
+                        }}>{darkTheme ? 'Nocturnal animals' : 'Diurnal animals'}</h2>
+                        <AnimalsList/>
+                    </Card>
+                </main>
 
-      <div className={classes['circle-1']}/>
-      <div className={classes['circle-2']}/>
-    </div>
-  </>
+                <footer>
+                    <Footer/>
+                </footer>
+
+                <div className={`${classes['circle-1']} ${darkTheme && classes['circle-1--dark']}`}/>
+                <div className={`${classes['circle-2']} ${darkTheme && classes['circle-2--dark']}`}/>
+            </div>
+        </ThemeContext.Provider>
+    </>
 }
 
-export
-{
-  App
-}
-  ;
+export {App, ThemeContext};

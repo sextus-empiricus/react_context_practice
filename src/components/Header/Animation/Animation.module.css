@@ -1,3 +1,17 @@
 .Animation {
     width: 250px;
+    transform: translateY(300px);
+    animation: get-in .8s .3s ease-in-out forwards;
+}
+
+@keyframes get-in {
+    0% {
+        transform: translateY(300px);
+    }
+    70% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }

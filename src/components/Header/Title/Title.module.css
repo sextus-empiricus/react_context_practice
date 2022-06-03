@@ -11,7 +11,7 @@
     position: absolute;
     top: -45rem;
     left: -10rem;
-    background: linear-gradient(184deg, rgb(246 230 252) 85%, rgb(209 143 216) 114%);
+    background: linear-gradient(184deg, rgb(246 230 252) 85%, rgb(251 158 196) 114%);
     height: 50rem;
     width: 98rem;
     transform: rotate(347deg);
@@ -30,4 +30,8 @@
 
 .Title .span-3 {
 
+}
+
+.Title--dark::after{
+    background: linear-gradient(184deg, rgb(5 7 32) 85%, rgb(20 11 84) 114%);
 }

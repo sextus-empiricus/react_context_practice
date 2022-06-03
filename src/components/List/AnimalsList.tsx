@@ -1,18 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import classes from './AnimalsList.module.css';
-import {diurnalAnimals} from '../../db/animals';
+import {diurnalAnimals, nocturnalAnimals} from '../../db/animals';
 import {ListElement} from './ListElement';
+import {ThemeContext} from '../../App';
 
 interface Props {
 
 }
 
 const AnimalsList = (props: Props) => {
+    const darkTheme = useContext(ThemeContext)
+    const animals = darkTheme ? nocturnalAnimals : diurnalAnimals;
     return (
         <ul className={classes.AnimalsList}>
             {
-                diurnalAnimals.map(el => <ListElement animal={el}/>)
+                animals.map(el => <ListElement animal={el} key={el.name}/>)
             }
         </ul>
     );

@@ -1,26 +1,43 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import lottie from 'lottie-web';
 
 import sunAnimation from '../../../assets/lottie-animatios/sun.json'
-import oweAnimation from '../../../assets/lottie-animatios/owl.json'
+import moonAnimation from '../../../assets/lottie-animatios/moon.json'
 
 import classes from './Animation.module.css';
+import {ThemeContext} from '../../../App';
 
 const Animation = () => {
-    const cowRef = useRef<any>(null);
+    const darkMode = useContext(ThemeContext);
+    const sunRef = useRef<any>(null);
+    const moonRef = useRef<any>(null);
 
     useEffect(() => {
+        lottie.destroy();
+
         lottie.loadAnimation({
-            container: cowRef.current,
+            container: sunRef.current,
             renderer: 'svg',
             loop: true,
             autoplay: true,
             animationData: sunAnimation,
         })
-    }, [])
 
-    return <div className={classes.Animation} ref={cowRef}/>
+        lottie.loadAnimation({
+            container: moonRef.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: moonAnimation
+        })
 
+    }, [darkMode])
+
+
+    return <>
+        {!darkMode && <div className={classes.Animation} ref={sunRef}/>}
+        {darkMode && <div className={classes.Animation} ref={moonRef}/>}
+    </>
 }
 
 export {Animation};
